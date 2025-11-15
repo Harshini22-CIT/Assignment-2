@@ -1,0 +1,115 @@
+/* General Reset and Base Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+}
+
+/* Make box-sizing predictable so padding doesn't cause overflow */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1000px; /* Adjusted max width for better centering */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.8em;
+    font-weight: 400; 
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* --- FIX: Internship Grid Layout (Use Flexbox to arrange cards side-by-side) --- */
+
+.internship-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns: two cards per row */
+    gap: 30px 20px; /* Vertical gap: 30px, Horizontal gap: 20px */
+}
+
+/* --- Individual Internship Card Styling --- */
+
+.internship-card {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); 
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 1.3em;
+    font-weight: 600; 
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* List Styling for Details */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    flex-grow: 1; 
+}
+
+li {
+    line-height: 1.8;
+    color: #555;
+    font-size: 0.95em;
+    position: relative;
+    padding-left: 15px; 
+}
+
+/* Custom bullet point for the list items */
+li::before {
+    content: "\2022"; /* Small bullet point */
+    color: black; 
+    font-size: 1.2em;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* --- Button Styling --- */
+
+/* --- Button Styling (Updated for Anchor Tag) --- */
+
+/* --- Button Styling (Updated) --- */
+
+.view-details-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    margin-top: 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    align-self: stretch;
+    margin-top: auto; /* push button to bottom and keep it inside the card */
+}
+
+/* ... rest of your CSS ... */
+
+.view-details-btn:hover {
+    background-color: #0056b3;
+}
